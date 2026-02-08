@@ -25,6 +25,3 @@ jobs:
           docker push $IMAGE:7.9.7
           docker push $IMAGE:latest
 
-permissions: 
-  contents: read
-  packages: write
