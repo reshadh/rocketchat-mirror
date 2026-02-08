@@ -11,9 +11,9 @@ jobs:
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
       - name: Pull from Docker Hub
-        run: docker pull registry-1.docker.io/rocketchat/rocket.chat:7.9.8
+        run: docker pull registry-1.docker.io/rocketchat/rocket.chat:7.9.7
 
       - name: Push to GHCR
         run: |
-          docker tag rocketchat/rocket.chat:7.9.8 ghcr.io/${{ github.repository_owner }}/rocket.chat:7.9.8
-          docker push ghcr.io/${{ github.repository_owner }}/rocket.chat:7.9.8
+          docker tag rocketchat/rocket.chat:7.9.7 ghcr.io/${{ github.repository_owner }}/rocket.chat:7.9.7
+          docker push ghcr.io/${{ github.repository_owner }}/rocket.chat:7.9.7
